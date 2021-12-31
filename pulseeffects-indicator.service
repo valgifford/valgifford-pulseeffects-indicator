@@ -1,0 +1,12 @@
+[Unit]
+Description=PulseEffects system tray preset switcher
+PartOf=graphical-session.target
+
+[Service]
+WorkingDirectory=/opt/pulseeffects-indicator/
+Type=simple
+ExecStart=python3 /opt/pulseeffects-indicator/pulseeffects-indicator.py
+Restart=always
+
+[Install]
+WantedBy=dbus.target
